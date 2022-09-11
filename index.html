@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination Component</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /*
+            SPACING SYSTEM (px)
+            2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+            FONT SIZE SYSTEM (px)
+            10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+            */
+
+      /*
+            MAIN COLOR: #087f5b
+            GREY COLOR: #343a40
+            */
+
+      /* global reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Inter, sans-serif;
+        color: #343a40;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        margin-top: 200px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      .icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
+      button {
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        background: none;
+      }
+      button,
+      .number {
+        height: 48px;
+        width: 48px;
+        display: inline-block;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button:hover .icon {
+        stroke: #fff;
+      }
+
+      button:hover,
+      .number:hover,
+      .active {
+        background-color: #087f5b;
+        color: #fff;
+        stroke: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- icon left -->
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <p class="number">1</p>
+      <p class="number">2</p>
+      <p class="number active">3</p>
+      <p class="number">4</p>
+      <p class="number">5</p>
+      <p class="number">6</p>
+      <p class="dot">...</p>
+      <p class="number">23</p>
+      <!-- icon right -->
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
